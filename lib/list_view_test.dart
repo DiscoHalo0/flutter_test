@@ -210,4 +210,4 @@ class _SwipeableItemState extends State<_SwipeableItem> {
       ),
     );
   }
-} //fammi un corretta indendazione grazie
+}
