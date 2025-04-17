@@ -84,7 +84,7 @@ class _SwipeableItemState extends State<_SwipeableItem> {
     Widget content;
 
     final commonStyle = TextStyle(
-      fontSize: 18,
+      fontSize: 17,
       color: Colors.white,
     );
 
