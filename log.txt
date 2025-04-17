@@ -1,16 +1,17 @@
 
 Step 1
-	-creazione app di base flutter
-	-aggiunta di una serie di item dinamici da 1 a inf.
-	-implementazione di un sistema di scrolling
-	-aggiunta la possibilità di cliccare i vari item
-	-aggiunto un sistema dinamico che lega univoca descrizione ad univoco item
-	-aggiunto background e adattato allo schermo
-	-implementati info e approfondisci con relativa pagina dedicata
-	-migliorati i movimenti e le animazioni più fluide.
-	-Corrette le linee troppo spesse, adesso sottili.
-	-aggiunta secondo background nelle due pagine non ancora 					visualizzabili
+	-creazione app di base flutter ✅
+	-aggiunta di una serie di item dinamici da 1 a inf. ✅
+	-implementazione di un sistema di scrolling ✅
+	-aggiunta la possibilità di cliccare i vari item ✅
+	-aggiunto un sistema dinamico che lega univoca descrizione ad univoco item ✅
+	-aggiunto background e adattato allo schermo ✅
+	-implementati info e approfondisci con relativa pagina dedicata ✅
+	-migliorati i movimenti e le animazioni più fluide. ✅
+	-Corrette le linee troppo spesse, adesso sottili. ✅
+	-aggiunta secondo background nelle due pagine non ancora  					visualizzabili ✅
 
-Step 2 (da fare)
-	
-	
+Step 2 
+	-Collegamento web con possibilità di aggiornare e utilizzare, tramite GitHub ✅
+	-Aggiungere il database di domande con spiegazione in loop 
+	other things...
