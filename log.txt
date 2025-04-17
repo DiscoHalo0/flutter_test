@@ -9,9 +9,12 @@ Step 1
 	-implementati info e approfondisci con relativa pagina dedicata ✅
 	-migliorati i movimenti e le animazioni più fluide. ✅
 	-Corrette le linee troppo spesse, adesso sottili. ✅
-	-aggiunta secondo background nelle due pagine non ancora  					visualizzabili ✅
+	-aggiunta secondo background nelle due pagine non ancora visualizzabili ✅
 
 Step 2 
 	-Collegamento web con possibilità di aggiornare e utilizzare, tramite GitHub ✅
 	-Aggiungere il database di domande con spiegazione in loop 
-	other things...
+	
+
+Step 3
+	-Sistema per caricare quiz in modo semi automatico o bot
