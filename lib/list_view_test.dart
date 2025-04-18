@@ -75,7 +75,7 @@ class _SwipeableItemState extends State<_SwipeableItem> {
     if (domanda == null) {
       return Center(
         child: Text(
-          'Seleziona solo un\'opzione',
+          'Domanda non disponibile',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       );
@@ -100,7 +100,7 @@ class _SwipeableItemState extends State<_SwipeableItem> {
         ),
       );
     } else if (swipeStep == 1) {
-      final domandaText = domanda['domanda'] ?? 'Seleziona solo un\'opzione';
+      final domandaText = domanda['domanda'] ?? 'Domanda non disponibile';
       final risposte = (domanda['risposte'] as List?) ?? [];
 
       content = Column(
@@ -128,12 +128,11 @@ class _SwipeableItemState extends State<_SwipeableItem> {
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Expanded(  // Aggiungi Expanded qui
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,  // Scroll orizzontale
                       child: Text(
                         risposte[index] ?? '',
                         style: commonStyle,
-                        maxLines: 4,  // Limita a 4 righe
-                        overflow: TextOverflow.ellipsis,  // Troncamento con "..." in caso di overflow
                       ),
                     ),
                   ],
@@ -182,23 +181,23 @@ class _SwipeableItemState extends State<_SwipeableItem> {
         duration: const Duration(milliseconds: 300),
         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
         padding: const EdgeInsets.all(16),
-        height: 238,  // Altezza fissa 
+        height: 220,  // Altezza fissa 
         decoration: BoxDecoration(
-          color: Colors.blue.shade100.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(28), // Bordi più rotondi
-          border: Border.all(
-            color: swipeStep == 0
-                ? Colors.transparent
-                : swipeStep == 1
-                    ? Colors.blue.shade300
-                    : Colors.blue.shade700,
-            width: 7,
-          ),
+  color: Colors.blue.shade100.withOpacity(0.5),
+  borderRadius: BorderRadius.circular(28), // Bordi più rotondi
+  border: Border.all(
+    color: swipeStep == 0
+        ? Colors.transparent
+        : swipeStep == 1
+            ? Colors.blue.shade300
+            : Colors.blue.shade700,
+               width: 3,
+                    ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              blurRadius: 6,
-              offset: const Offset(0, 2),
+            color: Colors.black.withOpacity(0.2),
+            blurRadius: 6,
+            offset: const Offset(0, 2),
             ),
           ],
         ),
@@ -211,4 +210,4 @@ class _SwipeableItemState extends State<_SwipeableItem> {
       ),
     );
   }
-}
+} //fammi un corretta indendazione grazie

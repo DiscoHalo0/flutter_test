@@ -1,169 +1,123 @@
 final Map<String, Map<String, dynamic>> itemDomande = {
-  'L\'affermazione seguente è corretta riguardo al grafico?': {
-    'risposte': [
-      'È un fenomeno che riguarda il passaggio di molecole da un lato della membrana all\'altro.',
-      'È un processo che richiede energia per il trasporto delle molecole.',
-      'È un meccanismo che avviene attraverso un canale ionico senza il bisogno di energia.',
-      'È un fenomeno che riguarda il trasporto passivo delle molecole.',
-      'Non è possibile determinarlo con certezza.'
-    ],
-    'corretta': 3,
-    'spiegazione': 'Il grafico mostra come il passaggio di molecole attraverso la membrana non richieda energia, ma avvenga in modo passivo.',
+  'Item 1': {
+    'domanda': 'Qual è il lavoro svolto in una '
+    'trasformazione isocora con calore di 500 J?',
+    'risposte': ['5/4 J', '0 J', '500 J', '400 J'],
+    'corretta': 1,
   },
-  'Il meccanismo rappresentato in figura si riferisce all\'entrata di molecole dall\'esterno all\'interno di una cellula. Può essere considerato un fenomeno di:': {
+  'Item 2': {
+    'domanda': 'Qual è la formula del lavoro in una trasformazione isobara?',
+    'risposte': ['L = pΔV', 'L = VΔp', 'L = nRT', 'L = ΔU'],
+    'corretta': 0,
+  },
+  'Item 3': {
+    'domanda': 'In una trasformazione adiabatica, cosa rimane costante?',
+    'risposte': ['Temperatura', 'Calore', 'Entropia', 'Energia interna'],
+    'corretta': 1,
+  },
+  'Item 4': {
+    'domanda': 'Il primo principio della termodinamica afferma che:',
     'risposte': [
-      'Trasporto attivo',
-      'Osmosi',
-      'Diffusione facilitata',
-      'Diffusione semplice',
-      'Pinocitosi'
+      'L’energia si conserva',
+      'La temperatura è costante',
+      'Il calore non varia',
+      'Il lavoro è nullo'
     ],
     'corretta': 0,
-    'spiegazione': 'Il trasporto attivo è il meccanismo che utilizza energia per far entrare molecole contro un gradiente di concentrazione.'
   },
-  'La figura si riferisce ad uno dei meccanismi di trasporto attraverso la membrana cellulare. Si può affermare che:': {
-    'risposte': [
-      'La molecola M è necessaria per la sopravvivenza della cellula',
-      'La molecola M è necessaria per la sintesi dell\'ATP',
-      'Si tratta di osmosi',
-      'La molecola M non si muove secondo gradiente di concentrazione',
-      'La molecola M tende a distribuirsi con la stessa concentrazione tra l\'interno e l\'esterno della cellula'
-    ],
+  'Item 5': {
+    'domanda': 'Quale grandezza misura la capacità termica?',
+    'risposte': ['Entropia', 'Temperatura', 'Calore', 'Calore specifico'],
     'corretta': 3,
-    'spiegazione': 'Il grafico mostra come la molecola M non si muove secondo un gradiente di concentrazione.'
   },
-  'Gli squali sono dotati di organi in grado di rilevare debolissimi campi elettrici, sino a valori di 1 μV/m. A che distanza dovremmo porre due piani conduttori paralleli a cui applichiamo una differenza di potenziale di 1,5 mV per avere campi elettrici dell\'ordine di quelli rilevati da uno squalo?': {
-    'risposte': [
-      '1,5 μm',
-      '1,5 m',
-      '1,5 cm',
-      '0,5 m',
-      '1,5 km'
-    ],
-    'corretta': 4,
-    'spiegazione': 'La differenza di potenziale tra le armature di un condensatore piano è data dal campo elettrico moltiplicato per la distanza tra esse'
+  'Item 6': {
+    'domanda': 'In una trasformazione isoterma per un gas ideale:',
+    'risposte': ['ΔU = 0', 'L = 0', 'Q = 0', 'T = 0'],
+    'corretta': 0,
   },
-  'Un fago infetta una cellula di E. coli e compie un ciclo lisogeno. Cosa significa?': {
-    'risposte': [
-      'Ha indotto immediatamente la lisi della cellula batterica.',
-      'Ha integrato il proprio DNA nel cromosoma batterico.',
-      'Ha inibito la duplicazione del DNA della cellula ospite.',
-      'Ha trasferito anche il capside all\'interno della cellula batterica.',
-      'Ha trasferito anche l\'enzima trascrittasi inversa all\'interno della cellula batterica.'
-    ],
-    'corretta': 1,
-    'spiegazione': 'Un virus può infettare la cellula ospite e il suo materiale nucleico può integrarsi nel cromosoma batterico. Questo tipo di interazione prende il nome di LISOGENIA, e il ciclo associato è il ciclo lisogeno.'
+  'Item 7': {
+    'domanda': 'Cosa indica la legge di Boyle?',
+    'risposte': ['pV = costante', 'V/T = costante', 'p/T = costante', 'nRT = costante'],
+    'corretta': 0,
   },
-  // Le domande da 'Item 6' a 'Item 20' sono state già sostituite, e ora seguono le restanti domande che avevi fornito:
-
-  'Quale tra questi rappresenta un esempio di reazione esotermica?': {
-    'risposte': [
-      'Scioglimento del ghiaccio',
-      'Evaporazione dell’acqua',
-      'Condensazione del vapore',
-      'Fusione del ferro',
-      'Sublimazione dello iodio'
-    ],
-    'corretta': 2,
-    'spiegazione': 'La condensazione rilascia calore nell’ambiente circostante, quindi è una reazione esotermica.'
+  'Item 8': {
+    'domanda': 'Durante una trasformazione ciclica:',
+    'risposte': ['ΔU = 0', 'Q = 0', 'L = 0', 'T = costante'],
+    'corretta': 0,
   },
-  'Quale fenomeno fisico è alla base del galleggiamento di un corpo in un fluido?': {
+  'Item 9': {
+    'domanda': 'Un gas compie lavoro quando:',
     'risposte': [
-      'La forza peso',
-      'La pressione atmosferica',
-      'Il principio di Archimede',
-      'La legge di Pascal',
-      'La tensione superficiale'
-    ],
-    'corretta': 2,
-    'spiegazione': 'Il principio di Archimede afferma che un corpo immerso in un fluido riceve una spinta verso l’alto pari al peso del volume di fluido spostato.'
-  },
-  'In un circuito elettrico, cosa rappresenta l’intensità di corrente?': {
-    'risposte': [
-      'La forza che spinge gli elettroni',
-      'La quantità di carica che attraversa una sezione nell’unità di tempo',
-      'L’energia fornita dalla batteria',
-      'La resistenza opposta al passaggio di elettroni',
-      'La potenza dissipata dal circuito'
-    ],
-    'corretta': 1,
-    'spiegazione': 'L’intensità di corrente si misura in ampere ed è la quantità di carica che passa in una sezione del circuito nell’unità di tempo.'
-  },
-  'Che cosa rappresenta il numero di massa di un atomo?': {
-    'risposte': [
-      'Il numero di elettroni',
-      'Il numero di protoni',
-      'La somma di protoni e neutroni',
-      'La differenza tra protoni e neutroni',
-      'Il numero di neutroni'
-    ],
-    'corretta': 2,
-    'spiegazione': 'Il numero di massa è la somma del numero di protoni e neutroni presenti nel nucleo.'
-  },
-  'Qual è la funzione principale dei ribosomi all’interno di una cellula?': {
-    'risposte': [
-      'Sintetizzare ATP',
-      'Controllare il passaggio delle sostanze',
-      'Produrre proteine',
-      'Trasportare ossigeno',
-      'Degradare sostanze tossiche'
-    ],
-    'corretta': 2,
-    'spiegazione': 'I ribosomi sono gli organelli responsabili della sintesi proteica a partire dall’mRNA.'
-  },
-  'Durante una trasformazione isocora, quale delle seguenti grandezze resta costante?': {
-    'risposte': [
-      'Pressione',
-      'Volume',
-      'Temperatura',
-      'Energia interna',
-      'Lavoro'
-    ],
-    'corretta': 1,
-    'spiegazione': 'In una trasformazione isocora, il volume resta costante e il lavoro è nullo.'
-  },
-  'Cosa indica l’equazione chimica bilanciata di una reazione?': {
-    'risposte': [
-      'Le quantità relative dei reagenti e dei prodotti',
-      'Il tempo necessario per completare la reazione',
-      'La temperatura a cui avviene la reazione',
-      'La velocità della reazione',
-      'Il colore dei composti coinvolti'
+      'Il volume aumenta',
+      'Il volume diminuisce',
+      'La pressione aumenta',
+      'La temperatura diminuisce'
     ],
     'corretta': 0,
-    'spiegazione': 'Un’equazione chimica bilanciata mostra il rapporto molare tra reagenti e prodotti, rispettando la conservazione della massa.'
   },
-  'Quale delle seguenti strutture è presente sia nelle cellule procariote che in quelle eucariote?': {
-    'risposte': [
-      'Nucleo',
-      'Mitocondri',
-      'Parete cellulare',
-      'Ribosomi',
-      'Reticolo endoplasmatico'
-    ],
-    'corretta': 3,
-    'spiegazione': 'I ribosomi sono presenti in entrambe le cellule procariote ed eucariote e sono fondamentali per la sintesi proteica.'
+  'Item 10': {
+    'domanda': 'Quale unità di misura ha il lavoro?',
+    'risposte': ['Joule', 'Pascal', 'Watt', 'Kelvin'],
+    'corretta': 0,
   },
-  'Un corpo è in equilibrio su un piano inclinato. Quale delle seguenti condizioni è soddisfatta?': {
-    'risposte': [
-      'La forza normale è nulla',
-      'La somma delle forze lungo il piano è diversa da zero',
-      'La forza peso è uguale alla forza normale',
-      'La componente della forza peso parallela al piano è equilibrata da una forza opposta',
-      'Il corpo è soggetto solo alla forza peso'
-    ],
-    'corretta': 3,
-    'spiegazione': 'Per essere in equilibrio, la componente della forza peso parallela al piano deve essere controbilanciata da una forza uguale e opposta (es. attrito).'
+  'Item 11': {
+    'domanda': 'La temperatura si misura in:',
+    'risposte': ['Watt', 'Kelvin', 'Pascal', 'Joule'],
+    'corretta': 1,
   },
-  'Quale dei seguenti elementi è un metallo alcalino-terroso?': {
-    'risposte': [
-      'Litio',
-      'Sodio',
-      'Magnesio',
-      'Potassio',
-      'Alluminio'
-    ],
+  'Item 12': {
+    'domanda': 'Qual è il significato di ΔU = Q - L?',
+    'risposte': ['Il primo principio', 'La legge di Ohm', 'La seconda legge', 'Il principio di Pascal'],
+    'corretta': 0,
+  },
+  'Item 13': {
+    'domanda': 'L’unità di misura della pressione è:',
+    'risposte': ['Joule', 'Kelvin', 'Pascal', 'Newton'],
     'corretta': 2,
-    'spiegazione': 'Il magnesio appartiene al gruppo dei metalli alcalino-terrosi, mentre litio, sodio e potassio sono alcalini.'
-  }
+  },
+  'Item 14': {
+    'domanda': 'Il calore latente è:',
+    'risposte': [
+      'Calore durante una trasf. di stato',
+      'Temperatura finale',
+      'Energia meccanica',
+      'Calore a volume costante'
+    ],
+    'corretta': 0,
+  },
+  'Item 15': {
+    'domanda': 'In una trasformazione isocora, il lavoro è:',
+    'risposte': ['0', 'pV', 'Q', 'nRT'],
+    'corretta': 0,
+  },
+  'Item 16': {
+    'domanda': 'La trasformazione isoterma ha:',
+    'risposte': ['T costante', 'V costante', 'p costante', 'Q costante'],
+    'corretta': 0,
+  },
+  'Item 17': {
+    'domanda': 'In una trasformazione isobara:',
+    'risposte': ['p costante', 'V costante', 'T costante', 'Q costante'],
+    'corretta': 0,
+  },
+  'Item 18': {
+    'domanda': 'La legge dei gas ideali è:',
+    'risposte': ['pV = nRT', 'p/T = costante', 'V = nRT', 'Q = L + ΔU'],
+    'corretta': 0,
+  },
+  'Item 19': {
+    'domanda': 'Il secondo principio della termodinamica afferma che:',
+    'risposte': [
+      'L’entropia tende ad aumentare',
+      'L’energia si crea',
+      'Il calore scende spontaneamente',
+      'Il lavoro è nullo'
+    ],
+    'corretta': 0,
+  },
+  'Item 20': {
+    'domanda': 'Durante una compressione isoterma:',
+    'risposte': ['Il gas cede calore', 'La temperatura diminuisce', 'Il volume aumenta', 'L’energia interna aumenta'],
+    'corretta': 0,
+  },
 };
