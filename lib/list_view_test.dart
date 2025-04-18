@@ -70,28 +70,19 @@ class _SwipeableItemState extends State<_SwipeableItem> {
 
   @override
   Widget build(BuildContext context) {
-    final domanda = itemDomande[widget.item];
+    final domanda = itemDomande[widget.item]!;
 
-    if (domanda == null) {
-      return Center(
-        child: Text(
-          'Seleziona solo un\'opzione',
-          style: TextStyle(color: Colors.white, fontSize: 18),
-        ),
-      );
-    }
-
-    Widget content;
-
-    final commonStyle = TextStyle(
+    final commonStyle = const TextStyle(
       fontSize: 14,
       color: Colors.white,
     );
 
+    Widget content;
+
     if (swipeStep == 0) {
-      content = Center(  // Utilizziamo Center per centrare esattamente l'item
+      content = Center(
         child: Align(
-          alignment: Alignment.center,  // Allineamento preciso al centro
+          alignment: Alignment.center,
           child: Text(
             widget.item,
             key: const ValueKey('text'),
@@ -100,18 +91,24 @@ class _SwipeableItemState extends State<_SwipeableItem> {
         ),
       );
     } else if (swipeStep == 1) {
-      final domandaText = domanda['domanda'] ?? 'Seleziona solo un\'opzione';
+      final domandaText = domanda['domanda'] ?? '';
       final risposte = (domanda['risposte'] as List?) ?? [];
 
       content = Column(
         key: const ValueKey('question'),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,  // Scroll orizzontale
-            child: Text(domandaText, style: commonStyle, textAlign: TextAlign.left),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Text(
+                domandaText,
+                style: commonStyle,
+                textAlign: TextAlign.left,
+              ),
+            ),
           ),
-          const SizedBox(height: 12),
           ...List.generate(risposte.length, (index) {
             final isSelected = selectedAnswerIndex == index;
             return GestureDetector(
@@ -128,12 +125,12 @@ class _SwipeableItemState extends State<_SwipeableItem> {
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Expanded(  // Aggiungi Expanded qui
+                    Expanded(
                       child: Text(
                         risposte[index] ?? '',
                         style: commonStyle,
-                        maxLines: 2,  // Limita a 2 righe (puoi cambiarlo a tuo piacere)
-                        overflow: TextOverflow.ellipsis,  // Troncamento con "..." in caso di overflow
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ],
@@ -149,17 +146,16 @@ class _SwipeableItemState extends State<_SwipeableItem> {
       final rispostaCorretta = corretta != null && corretta >= 0 && corretta < risposte.length
           ? risposte[corretta]
           : 'Risposta non disponibile';
-
       final spiegazione = domanda['spiegazione'] ?? 'Spiegazione non disponibile';
 
       content = Column(
         key: const ValueKey('answer'),
-        crossAxisAlignment: CrossAxisAlignment.center,  // Centrato
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            'Risposta corretta: $rispostaCorretta',
+            rispostaCorretta,
             style: commonStyle.copyWith(fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,  // Centrato
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 8),
           SingleChildScrollView(
@@ -167,7 +163,7 @@ class _SwipeableItemState extends State<_SwipeableItem> {
             child: Text(
               spiegazione,
               style: commonStyle,
-              textAlign: TextAlign.center,  // Centrato
+              textAlign: TextAlign.center,
             ),
           ),
           const SizedBox(height: 16),
@@ -182,10 +178,10 @@ class _SwipeableItemState extends State<_SwipeableItem> {
         duration: const Duration(milliseconds: 300),
         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
         padding: const EdgeInsets.all(16),
-        height: 238,  // Altezza fissa 
+        height: 238,
         decoration: BoxDecoration(
           color: Colors.blue.shade100.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(28), // Bordi più rotondi
+          borderRadius: BorderRadius.circular(28),
           border: Border.all(
             color: swipeStep == 0
                 ? Colors.transparent
@@ -202,7 +198,7 @@ class _SwipeableItemState extends State<_SwipeableItem> {
             ),
           ],
         ),
-        child: SingleChildScrollView( // Consente lo scroll
+        child: SingleChildScrollView(
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 300),
             child: content,
