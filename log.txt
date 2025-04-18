@@ -12,8 +12,9 @@ Step 1
 	-aggiunta secondo background nelle due pagine non ancora visualizzabili ✅
 
 Step 2 
-	-Collegamento web con possibilità di aggiornare e utilizzare, tramite GitHub ✅
-	-Aggiungere il database di domande con spiegazione in loop 
+	-Collegamento web con possib. di aggiornare e utilizzare, tramite GitHub ✅
+	-Aggiungere il database di domande con spiegazione in loop ✅
+	-Cambio eventuale sfondo 
 	
 
 Step 3
